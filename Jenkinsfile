@@ -8,6 +8,12 @@ pipeline {
       }
     }
 
+    stage('scanner') {
+      steps {
+        tool(name: 'SonarQubeScanner', type: 'SonarQubeScanner')
+      }
+    }
+
   }
   tools {
     maven 'maven3.8'
