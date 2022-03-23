@@ -10,6 +10,7 @@ pipeline {
     stage('run a command') {
       steps {
         sh 'mvn install'
+        sh 'mvn install'
       }
     }
 
