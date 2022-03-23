@@ -1,11 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('tool') {
+    stage('git clone ') {
       steps {
-        tool(name: 'maven', type: 'maven3.8')
+        git 'https://github.com/pradeepsingh0/gitproject.git'
       }
     }
 
+  }
+  tools {
+    maven 'maven3.8'
   }
 }
